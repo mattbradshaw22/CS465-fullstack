@@ -30,7 +30,12 @@ export class TripData {
   }
 
   updateTrip(formData: Trip) : Observable<Trip> {
-    // console.log('Inside TripData::addTrips');
+    // console.log('Inside TripData::updateTrip');
     return this.http.put<Trip>(this.url + '/' + formData.code, formData);
+  }
+
+  deleteTrip(tripCode: string) : Observable<Trip> {
+    // console.log('Inside TripData::deleteTrip');
+    return this.http.delete<Trip>(this.url + '/' + tripCode);
   }
 }
