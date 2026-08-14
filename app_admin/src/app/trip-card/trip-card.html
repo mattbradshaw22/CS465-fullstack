@@ -13,10 +13,10 @@
                 </p>
                 <p class="card-text" [innerHTML]="trip.description">
                 </p>
-                <div class="d-flex">
+                <div *ngIf="isLoggedIn()">
                     <button (click)="editTrip(trip)" class="btn btn-info">Edit Trip</button>
 
-                    <button (click)="deleteTrip(trip)" class="btn btn-danger ms-auto">Delete Trip</button>
+                    <button (click)="deleteTrip(trip)" class="btn btn-danger ms-2">Delete Trip</button>
                 </div>
             </div>
         </div>
